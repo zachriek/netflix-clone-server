@@ -1,5 +1,5 @@
-import { comparePassword, hashPassword } from '../../utils';
-import { findUserByEmail, insertUser } from './auth.repository';
+import { comparePassword, hashPassword } from '../../libs/bcrypt';
+import { findUserByEmail, insertUser } from './user.repository';
 
 export const createUser = async (userData: { email: string; name: string; password: string }) => {
   const existingUser = await findUserByEmail(userData.email);

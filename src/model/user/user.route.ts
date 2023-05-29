@@ -1,7 +1,7 @@
 import express from 'express';
-import { login, register } from './auth.controller';
-import { validate } from '../../utils';
-import { loginSchema, registerSchema } from './auth.schema';
+import { login, register } from './user.controller';
+import { validate } from '../../libs/zod';
+import { loginSchema, registerSchema } from './user.schema';
 
 const router = express.Router();
 
